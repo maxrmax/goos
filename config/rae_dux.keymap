@@ -45,7 +45,7 @@
         compatible = "zmk,combos";
 
         Into_the_breach {
-            bindings = <&tog 6>;
+            bindings = <&tog 0>;
             key-positions = <9 29>;
         };
 
@@ -57,7 +57,6 @@
         ITB_Space {
             bindings = <&kp SPACE>;
             key-positions = <11 12 13>;
-            layers = <6>;
         };
 
         qwerty {
@@ -127,17 +126,6 @@
 &none    &kp Y  &kp X  &kp C      &none                      &none  &kp S     &none     &kp E      &none
                        &kp LSHFT  &kp SPACE  &none    &kp B  &kp A  &none
             >;
-        };
-
-        Into_the_breach {
-            bindings = <
-&none           &none  &none   &none   &none                  &none  &none  &none  &none  &none
-&kp LEFT_SHIFT  &kp R  &kp N2  &kp N1  &none                  &none  &none  &none  &none  &none
-&none           &none  &none   &none   &none                  &none  &none  &none  &none  &none
-                               &kp S   &kp A  &kp D    &none  &none  &none
-            >;
-
-            label = "itb_layer";
         };
     };
 };
