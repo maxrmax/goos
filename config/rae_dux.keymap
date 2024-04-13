@@ -26,7 +26,7 @@
             label = "HOME_ROW_MODS";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -37,38 +37,40 @@
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
         };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        Into_the_breach {
-            bindings = <&tog 0>;
-            key-positions = <9 29>;
-        };
-
         Gamepad {
             bindings = <&tog 5>;
             key-positions = <8 28>;
-        };
-
-        ITB_Space {
-            bindings = <&kp SPACE>;
-            key-positions = <11 12 13>;
         };
 
         qwerty {
             bindings = <&tog 1>;
             key-positions = <0 20>;
         };
+
+        bl_r {
+            bindings = <&bootloader>;
+            key-positions = <9 29>;
+            layers = <2>;
+        };
+
+        bl_l {
+            bindings = <&bootloader>;
+            key-positions = <20 0>;
+            layers = <3>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        alpha_layer {
+        colemakDH {
             bindings = <
 &kp Q            &kp W         &kp F              &kp P        &kp B                              &kp J           &kp L        &kp U               &kp Y         &kp SEMI
 &hrm LEFT_ALT A  &hrm LCTRL R  &hrm LEFT_SHIFT S  &hrm LGUI T  &kp G                              &kp M           &hrm LGUI N  &hrm RIGHT_SHIFT E  &hrm LCTRL I  &hrm RIGHT_ALT O
@@ -77,7 +79,7 @@
             >;
         };
 
-        alpha_layer_qwerty {
+        qwerty {
             bindings = <
 &kp Q            &kp W         &kp E              &kp R        &kp T                              &kp Y           &kp U        &kp I               &kp O         &kp P
 &hrm LEFT_ALT A  &hrm LCTRL S  &hrm LEFT_SHIFT D  &hrm LGUI F  &kp G                              &kp H           &hrm LGUI J  &hrm RIGHT_SHIFT K  &hrm LCTRL L  &hrm RIGHT_ALT SEMICOLON
