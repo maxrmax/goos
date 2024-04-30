@@ -56,13 +56,13 @@
 
         bl_r {
             bindings = <&bootloader>;
-            key-positions = <9 29>;
+            key-positions = <9 29 34>;
             layers = <2>;
         };
 
         bl_l {
             bindings = <&bootloader>;
-            key-positions = <20 0>;
+            key-positions = <20 0 31>;
             layers = <3>;
         };
     };
