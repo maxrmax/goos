@@ -44,11 +44,6 @@
     combos {
         compatible = "zmk,combos";
 
-        Gamepad {
-            bindings = <&tog 5>;
-            key-positions = <28 8>;
-        };
-
         qwerty {
             bindings = <&tog 1>;
             key-positions = <0 20>;
@@ -62,6 +57,11 @@
         bl_l {
             bindings = <&bootloader>;
             key-positions = <20 0 4>;
+        };
+
+        disable_input {
+            bindings = <&tog 5>;
+            key-positions = <30 31 32>;
         };
     };
 
@@ -110,21 +110,21 @@
 
         Tri {
             bindings = <
-&bootloader     &none  &none  &none  &none                  &none  &none               &none  &none  &bootloader
-&bt BT_SEL 0    &none  &none  &none  &none                  &none  &kp LG(LS(LC(N4)))  &none  &none  &none
-&bt BT_CLR_ALL  &none  &none  &none  &none                  &none  &none               &none  &none  &none
+&none           &none  &none  &none  &none                  &none  &none  &none  &none  &bootloader
+&bt BT_NXT      &none  &none  &none  &none                  &none  &none  &none  &none  &none
+&bt BT_CLR_ALL  &none  &none  &none  &none                  &none  &none  &none  &none  &none
                               &none  &none  &none    &none  &none  &none
             >;
 
             label = "tri_layer";
         };
 
-        gamepad {
+        empty {
             bindings = <
-&kp ESC  &kp Q  &kp W  &kp E      &kp R                      &none  &kp L     &kp UP    &kp R      &none
-&kp TAB  &kp A  &kp S  &kp D      &kp F                      &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none
-&none    &kp Y  &kp X  &kp C      &none                      &none  &kp S     &none     &kp E      &none
-                       &kp LSHFT  &kp SPACE  &none    &kp B  &kp A  &none
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
