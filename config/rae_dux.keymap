@@ -111,8 +111,8 @@
         Tri {
             bindings = <
 &none           &none  &none  &none  &none                  &none  &none  &none  &none  &bootloader
-&bt BT_NXT      &none  &none  &none  &none                  &none  &none  &none  &none  &none
-&bt BT_CLR_ALL  &none  &none  &none  &none                  &none  &none  &none  &none  &none
+&bt BT_NXT      &none  &none  &none  &none                  &none  &none  &none  &none  &bt BT_NXT
+&bt BT_CLR_ALL  &none  &none  &none  &none                  &none  &none  &none  &none  &bt BT_CLR_ALL
                               &none  &none  &none    &none  &none  &none
             >;
 
@@ -121,10 +121,10 @@
 
         empty {
             bindings = <
-&none  &none  &none  &none  &none                  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none                  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none                  &none  &none  &none  &none  &none
-                     &none  &none  &none    &none  &none  &none
+&none  &none  &none  &none  &none                           &none           &none  &none  &none  &none
+&none  &none  &none  &none  &none                           &none           &none  &none  &none  &none
+&none  &none  &none  &none  &none                           &none           &none  &none  &none  &none
+                     &none  &lt_repeat 4 0  &none    &none  &lt_repeat 4 0  &none
             >;
         };
     };
